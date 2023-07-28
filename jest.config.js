@@ -20,7 +20,7 @@ module.exports = {
     [
       './node_modules/jest-html-reporter',
       {
-        pageTitle: 'parseURL.js 单测报告',
+        pageTitle: 'intersection.js 单测报告',
         outputPath: 'report/unit-test/index.html',
         includeFailureMsg: true
       }
