@@ -7,19 +7,21 @@ import isElement from './utils/isElement'
  * @method intersection
  * @param {Function} fn
  * @param {Object} [props]
- * @param {Object|HTMLElement} [props.root]
  * @param {String} [props.selector]
  * @param {Object} [props.context]
- * @param {String} [props.attr]
+ * @param {Object|HTMLElement} [props.root]
+ * @param {Number|Array} [props.threshold]
  * @param {String} [props.rootMargin]
  */
 const intersection = (fn, props = {}) => {
   const root = props.root || null
   const selector = props.selector || '.outline-heading'
   const context = props.context || null
+  const threshold = props.threshold || 0
   const rootMargin = props.rootMargin || '0px 0px -90% 0px'
   const options = {
-    rootMargin: rootMargin
+    rootMargin: rootMargin,
+    threshold: threshold
   }
   const Observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

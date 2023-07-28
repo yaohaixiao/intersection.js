@@ -1,4 +1,4 @@
-import toString from '../lang/toString'
+import toString from './toString'
 
 /**
  * 检测测试数据是否为 Function 类型

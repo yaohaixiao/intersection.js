@@ -1,6 +1,6 @@
 {
   "name": "@yaohaixiao/intersection.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "intersection.js - 通用的 IntersectionObserver 观察者处理器功能函数。",
   "main": "intersection.min.js",
   "scripts": {
