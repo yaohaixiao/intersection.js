@@ -4,7 +4,7 @@
 ![Gzip size](http://img.badgesize.io/https://cdn.jsdelivr.net/gh/yaohaixiao/intersection.js/intersection.min.js?compression=gzip&label=gzip%20size)
 [![prettier code style](https://img.shields.io/badge/code_style-prettier-07b759.svg)](https://prettier.io)
 [![Coverage](https://codecov.io/gh/yaohaixiao/intersection.js/branch/main/graph/badge.svg)](https://codecov.io/gh/yaohaixiao/intersection.js)
-[![npm downloads](https://img.shields.io/npm/dt/@yaohaixiao/intersection.js)](https://npmcharts.com/compare/@yaohaixiao/intersection.js?minimal=true)
+[![npm downloads](https://img.shields.io/npm/dm/@yaohaixiao/intersection.js)](https://npmcharts.com/compare/@yaohaixiao/intersection.js?minimal=true)
 [![MIT License](https://img.shields.io/github/license/yaohaixiao/intersection.js.svg)](https://github.com/yaohaixiao/intersection.js/blob/main/LICENSE)
 
 intersection.js - 通用的 IntersectionObserver 观察者处理器功能函数。
