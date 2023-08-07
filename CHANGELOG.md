@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/yaohaixiao/intersection.js/compare/0.1.0...0.2.0) (2023-08-07)
+
+
+### Features
+
+* 添加返回 IntersectionObserver 对象，以便调用  disconnect()、observe()、takeRecords() 等方法。 ([6151ed4](https://github.com/yaohaixiao/intersection.js/commit/6151ed4095e9acbef16f6b6a81b65899d639dad3))
+
+
+
 # 0.1.0 (2023-07-28)
 
 intersection.js - 通用的 IntersectionObserver 观察者处理器功能函数。
