@@ -99,6 +99,11 @@ Default: `{}`
 | `rootMargin` | `String`              | '0px 0px -90% 0px' | 可选，根 (root) 元素的外边距。类似于 CSS 中的 margin 属性，比如 "10px 20px 30px 40px" (top、right、bottom、left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为四个边距全是 0。 |
 
 
+#### Returns
+
+Type: `IntersectionObserver`
+
+IntersectionObserver 对象实例，以便调用 disconnect()、observe()、takeRecords() 等方法。
 
 ## Usage
 
@@ -108,6 +113,7 @@ import intersection from '@yaohaixiao/intersection.js/intersection'
 const Chapters = {
   // 省略其它逻辑
   onObserver() {
+    const selector = this.attr('selector')
     let timer = null
 
     intersection(
@@ -129,8 +135,24 @@ const Chapters = {
       },
       // 指定 fn() 的 this 为当前对象，其余都使用默认值
       // 因为当时就是为 outline.js 开发的，所有默认值即可
-      { context: this }
+      {
+        selector,
+        context: this 
+      }
     )
+
+    return this
+  },
+  removeListeners() {
+    const selector = this.attr('selector')
+    
+    // 省略其它逻辑...
+
+    if (this.Observer) {
+      document.querySelectorAll(selector).forEach((section) => {
+        this.Observer.unobserve(section)
+      })
+    }
 
     return this
   }

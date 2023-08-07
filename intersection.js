@@ -12,6 +12,7 @@ import isElement from './utils/isElement'
  * @param {Object|HTMLElement} [props.root]
  * @param {Number|Array} [props.threshold]
  * @param {String} [props.rootMargin]
+ * @return {IntersectionObserver}
  */
 const intersection = (fn, props = {}) => {
   const root = props.root || null
@@ -41,6 +42,8 @@ const intersection = (fn, props = {}) => {
   $root.querySelectorAll(selector).forEach((section) => {
     Observer.observe(section)
   })
+
+  return Observer
 }
 
 export default intersection
